@@ -1,0 +1,7 @@
+E:\Co so lap trinh\HelloWorld\HelloWorld\bin\Debug\HelloWorld.exe
+E:\Co so lap trinh\HelloWorld\HelloWorld\bin\Debug\HelloWorld.pdb
+E:\Co so lap trinh\HelloWorld\HelloWorld\obj\x86\Debug\HelloWorld.Form1.resources
+E:\Co so lap trinh\HelloWorld\HelloWorld\obj\x86\Debug\HelloWorld.Properties.Resources.resources
+E:\Co so lap trinh\HelloWorld\HelloWorld\obj\x86\Debug\HelloWorld.csproj.GenerateResource.Cache
+E:\Co so lap trinh\HelloWorld\HelloWorld\obj\x86\Debug\HelloWorld.exe
+E:\Co so lap trinh\HelloWorld\HelloWorld\obj\x86\Debug\HelloWorld.pdb
