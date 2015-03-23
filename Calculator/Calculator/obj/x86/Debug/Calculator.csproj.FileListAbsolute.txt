@@ -1,0 +1,8 @@
+c:\users\windy\documents\visual studio 2010\Projects\Calculator\Calculator\bin\Debug\Calculator.exe
+c:\users\windy\documents\visual studio 2010\Projects\Calculator\Calculator\bin\Debug\Calculator.pdb
+c:\users\windy\documents\visual studio 2010\Projects\Calculator\Calculator\obj\x86\Debug\Calculator.frmMain.resources
+c:\users\windy\documents\visual studio 2010\Projects\Calculator\Calculator\obj\x86\Debug\Calculator.Properties.Resources.resources
+c:\users\windy\documents\visual studio 2010\Projects\Calculator\Calculator\obj\x86\Debug\Calculator.csproj.GenerateResource.Cache
+c:\users\windy\documents\visual studio 2010\Projects\Calculator\Calculator\obj\x86\Debug\Calculator.exe
+c:\users\windy\documents\visual studio 2010\Projects\Calculator\Calculator\obj\x86\Debug\Calculator.pdb
+C:\Users\windy\documents\visual studio 2010\Projects\Calculator\Calculator\obj\x86\Debug\Calculator.csprojResolveAssemblyReference.cache
