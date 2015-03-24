@@ -6,12 +6,15 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace Calculator
 {
     public partial class frmMain : Form
     {
-        bool isTypingNumber = false;
+        bool isTypingNumber = true;
+        bool isThapPhan = true;
+        bool isBegin = true;
         enum PhepToan { Cong, Tru, Nhan, Chia };
         PhepToan pheptoan;
         double nho =0.0;
@@ -64,14 +67,8 @@ namespace Calculator
 
         private void btnThapPhan_Click(object sender, EventArgs e)
         {
-            if (isTypingNumber)
-                lblDisplay.Text = lblDisplay.Text + btnThapPhan.Text;
-            else
-            {
-                lblDisplay.Text = btnThapPhan.Text;
-                isTypingNumber = true;
-            }
-
+            if (isThapPhan)
+            { lblDisplay.Text = lblDisplay.Text + btnThapPhan.Text; isThapPhan = false; }
         }
 
         private double TinhKetQua()
@@ -89,7 +86,8 @@ namespace Calculator
                 case PhepToan.Chia:
                     ketqua = nho / double.Parse(lblDisplay.Text); break;
             }
-            lblDisplay.Text = ketqua.ToString();
+    
+            lblDisplay.Text = Convert.ToString(ketqua);
             return ketqua; 
         }
 
@@ -102,8 +100,17 @@ namespace Calculator
 
         private void NhapSo(object sender, EventArgs e)
         {
+
             if (isTypingNumber)
-                lblDisplay.Text = lblDisplay.Text + ((Button)sender).Text;
+            {
+                if (isBegin)
+                {
+                    lblDisplay.Text = "";
+                    lblDisplay.Text = lblDisplay.Text + ((Button)sender).Text;
+                    isBegin = false;
+                }
+                else lblDisplay.Text = lblDisplay.Text + ((Button)sender).Text;
+            }
             else
             {
                 lblDisplay.Text = ((Button)sender).Text;
@@ -113,6 +120,7 @@ namespace Calculator
 
         private void NhapPhepToan(object sender, EventArgs e)
         {
+            isThapPhan = true;
             isTypingNumber = false;
             switch (((Button)sender).Text)
             {
@@ -123,21 +131,26 @@ namespace Calculator
                 case "*":
                     pheptoan = PhepToan.Nhan;break;
                 case "/":
-                    pheptoan = PhepToan.Chia;break;
-
+                    pheptoan = PhepToan.Chia;break;               
             }
 
-            TinhKetQua();
-            nho = double.Parse(lblDisplay.Text);
+            //TinhKetQua();
+            nho = double.Parse(lblDisplay.Text, CultureInfo.InvariantCulture);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            lblDisplay.Text = "0.";
+            isTypingNumber = true;
+            isThapPhan = true;
+            isBegin = true;
         }
 
-       
+        private void btnPhanTram_Click(object sender, EventArgs e)
+        {
+            lblDisplay.Text = (nho * double.Parse(lblDisplay.Text) / 100).ToString();
 
-     
+        }
+   
     }
 }

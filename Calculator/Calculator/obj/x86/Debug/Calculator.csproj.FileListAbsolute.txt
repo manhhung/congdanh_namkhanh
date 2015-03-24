@@ -6,3 +6,11 @@ c:\users\windy\documents\visual studio 2010\Projects\Calculator\Calculator\obj\x
 c:\users\windy\documents\visual studio 2010\Projects\Calculator\Calculator\obj\x86\Debug\Calculator.exe
 c:\users\windy\documents\visual studio 2010\Projects\Calculator\Calculator\obj\x86\Debug\Calculator.pdb
 C:\Users\windy\documents\visual studio 2010\Projects\Calculator\Calculator\obj\x86\Debug\Calculator.csprojResolveAssemblyReference.cache
+D:\Users\KhanhDaiCa\Documents\GitHub\congdanh_namkhanh\Calculator\Calculator\obj\x86\Debug\Calculator.exe
+D:\Users\KhanhDaiCa\Documents\GitHub\congdanh_namkhanh\Calculator\Calculator\obj\x86\Debug\Calculator.pdb
+D:\Users\KhanhDaiCa\Documents\GitHub\congdanh_namkhanh\Calculator\Calculator\bin\Debug\Calculator.exe
+D:\Users\KhanhDaiCa\Documents\GitHub\congdanh_namkhanh\Calculator\Calculator\bin\Debug\Calculator.pdb
+D:\Users\KhanhDaiCa\Documents\GitHub\congdanh_namkhanh\Calculator\Calculator\obj\x86\Debug\Calculator.csprojResolveAssemblyReference.cache
+D:\Users\KhanhDaiCa\Documents\GitHub\congdanh_namkhanh\Calculator\Calculator\obj\x86\Debug\Calculator.frmMain.resources
+D:\Users\KhanhDaiCa\Documents\GitHub\congdanh_namkhanh\Calculator\Calculator\obj\x86\Debug\Calculator.Properties.Resources.resources
+D:\Users\KhanhDaiCa\Documents\GitHub\congdanh_namkhanh\Calculator\Calculator\obj\x86\Debug\Calculator.csproj.GenerateResource.Cache

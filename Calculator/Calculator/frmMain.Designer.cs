@@ -49,7 +49,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.btnSqrt = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnPhanTram = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblDisplay
@@ -181,7 +181,7 @@
             this.btnTru.TabIndex = 12;
             this.btnTru.Text = "-";
             this.btnTru.UseVisualStyleBackColor = true;
-            this.btnTru.Click += new System.EventHandler(this.btnTru_Click);
+            this.btnTru.Click += new System.EventHandler(this.NhapPhepToan);
             // 
             // btnNhan
             // 
@@ -191,7 +191,7 @@
             this.btnNhan.TabIndex = 13;
             this.btnNhan.Text = "*";
             this.btnNhan.UseVisualStyleBackColor = true;
-            this.btnNhan.Click += new System.EventHandler(this.btnNhan_Click);
+            this.btnNhan.Click += new System.EventHandler(this.NhapPhepToan);
             // 
             // btnChia
             // 
@@ -201,7 +201,7 @@
             this.btnChia.TabIndex = 14;
             this.btnChia.Text = "/";
             this.btnChia.UseVisualStyleBackColor = true;
-            this.btnChia.Click += new System.EventHandler(this.btnChia_Click);
+            this.btnChia.Click += new System.EventHandler(this.NhapPhepToan);
             // 
             // btnBang
             // 
@@ -260,21 +260,22 @@
             this.btnBack.Text = "←";
             this.btnBack.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnPhanTram
             // 
-            this.button5.Location = new System.Drawing.Point(200, 161);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(30, 30);
-            this.button5.TabIndex = 21;
-            this.button5.Text = "%";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnPhanTram.Location = new System.Drawing.Point(200, 161);
+            this.btnPhanTram.Name = "btnPhanTram";
+            this.btnPhanTram.Size = new System.Drawing.Size(30, 30);
+            this.btnPhanTram.TabIndex = 21;
+            this.btnPhanTram.Text = "%";
+            this.btnPhanTram.UseVisualStyleBackColor = true;
+            this.btnPhanTram.Click += new System.EventHandler(this.btnPhanTram_Click);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(324, 307);
-            this.Controls.Add(this.button5);
+            this.ClientSize = new System.Drawing.Size(297, 259);
+            this.Controls.Add(this.btnPhanTram);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnSqrt);
             this.Controls.Add(this.button2);
@@ -328,7 +329,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnSqrt;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnPhanTram;
     }
 }
 
