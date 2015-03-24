@@ -49,7 +49,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.btnSqrt = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnPhanTram = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblDisplay
@@ -221,6 +221,7 @@
             this.btnThapPhan.TabIndex = 16;
             this.btnThapPhan.Text = ".";
             this.btnThapPhan.UseVisualStyleBackColor = true;
+            this.btnThapPhan.Click += new System.EventHandler(this.btnThapPhan_Click);
             // 
             // btnAmDuong
             // 
@@ -230,6 +231,7 @@
             this.btnAmDuong.TabIndex = 17;
             this.btnAmDuong.Text = "+/-";
             this.btnAmDuong.UseVisualStyleBackColor = true;
+            this.btnAmDuong.Click += new System.EventHandler(this.btnAmDuong_Click);
             // 
             // button2
             // 
@@ -261,21 +263,22 @@
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // button5
+            // btnPhanTram
             // 
-            this.button5.Location = new System.Drawing.Point(200, 161);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(30, 30);
-            this.button5.TabIndex = 21;
-            this.button5.Text = "%";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnPhanTram.Location = new System.Drawing.Point(200, 161);
+            this.btnPhanTram.Name = "btnPhanTram";
+            this.btnPhanTram.Size = new System.Drawing.Size(30, 30);
+            this.btnPhanTram.TabIndex = 21;
+            this.btnPhanTram.Text = "%";
+            this.btnPhanTram.UseVisualStyleBackColor = true;
+            this.btnPhanTram.Click += new System.EventHandler(this.button5_Click);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(291, 259);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btnPhanTram);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnSqrt);
             this.Controls.Add(this.button2);
@@ -329,7 +332,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnSqrt;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnPhanTram;
     }
 }
 

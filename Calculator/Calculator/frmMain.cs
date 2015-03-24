@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace Calculator
 {
@@ -48,6 +49,7 @@ namespace Calculator
                 
             }
             lblDisplay.Text = ketqua.ToString();
+           
             return ketqua; 
         }
 
@@ -56,13 +58,14 @@ namespace Calculator
 
             isTypingNumber = false;
             TinhKetQua();
-            //lblDisplay.Text=TinhKetQua().ToString();
         }
 
         private void NhapSo(object sender, EventArgs e)
-        {
+        {           
             if (isTypingNumber)
-                lblDisplay.Text = lblDisplay.Text + ((Button)sender).Text;
+            {         
+                    lblDisplay.Text = lblDisplay.Text + ((Button)sender).Text;                 
+            }
             else
             {
                 lblDisplay.Text = ((Button)sender).Text;
@@ -89,13 +92,13 @@ namespace Calculator
                                        
             }
 
-            //TinhKetQua();
-            nho = double.Parse(lblDisplay.Text);
+            nho = double.Parse(lblDisplay.Text, CultureInfo.InvariantCulture);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            lblDisplay.Text = "0.";
+            isTypingNumber = false;
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -107,8 +110,33 @@ namespace Calculator
             else lblDisplay.Text = "0.";
         }
 
-       
+        private bool CheckThapPhan(string str)
+        {
+            if (str.Contains(".")) return true;
+            return false;
+        }
+        private void btnThapPhan_Click(object sender, EventArgs e)
+        {
+            if (CheckThapPhan(lblDisplay.Text)==false)
+            { lblDisplay.Text = lblDisplay.Text + btnThapPhan.Text; }
+        }
 
-     
+        private void button5_Click(object sender, EventArgs e)
+        {
+            lblDisplay.Text = (nho * double.Parse(lblDisplay.Text) / 100).ToString();
+        }
+
+        private bool CheckAmDuong(string str)
+        {
+            if (str.Contains("-")) return false;
+            return true;
+        }
+
+        private void btnAmDuong_Click(object sender, EventArgs e)
+        {
+            if (CheckAmDuong(lblDisplay.Text)) lblDisplay.Text = "-"+ lblDisplay.Text;
+            else lblDisplay.Text=lblDisplay.Text.Remove(0, 1);
+        }
+       
     }
 }
