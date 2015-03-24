@@ -12,7 +12,7 @@ namespace Calculator
     public partial class frmMain : Form
     {
         bool isTypingNumber = false;
-        enum PhepToan { Cong, Tru, Nhan, Chia };
+        enum PhepToan { Cong, Tru, Nhan, Chia,CanBacHai };
         PhepToan pheptoan;
         double nho =0.0;
 
@@ -29,51 +29,6 @@ namespace Calculator
 
         
         
-//Cac phep toan
-        private void btnCong_Click(object sender, EventArgs e)
-        {
-            isTypingNumber = false;
-            pheptoan = PhepToan.Cong;
-            this.btnBang_Click(sender, e);
-            nho = double.Parse(lblDisplay.Text);
-        }
-
-        private void btnTru_Click(object sender, EventArgs e)
-        {
-            isTypingNumber = false;
-            pheptoan = PhepToan.Tru;
-            this.btnBang_Click(sender, e);
-            nho = double.Parse(lblDisplay.Text);
-        }
-
-        private void btnNhan_Click(object sender, EventArgs e)
-        {
-            isTypingNumber = false;
-            pheptoan = PhepToan.Nhan;
-            this.btnBang_Click(sender, e);
-            nho = double.Parse(lblDisplay.Text);
-        }
-
-        private void btnChia_Click(object sender, EventArgs e)
-        {
-            isTypingNumber = false;
-            pheptoan = PhepToan.Chia;
-            this.btnBang_Click(sender, e);
-            nho = double.Parse(lblDisplay.Text);
-        }
-
-        private void btnThapPhan_Click(object sender, EventArgs e)
-        {
-            if (isTypingNumber)
-                lblDisplay.Text = lblDisplay.Text + btnThapPhan.Text;
-            else
-            {
-                lblDisplay.Text = btnThapPhan.Text;
-                isTypingNumber = true;
-            }
-
-        }
-
         private double TinhKetQua()
         {
             
@@ -88,6 +43,9 @@ namespace Calculator
                     ketqua = nho * double.Parse(lblDisplay.Text); break;
                 case PhepToan.Chia:
                     ketqua = nho / double.Parse(lblDisplay.Text); break;
+                case PhepToan.CanBacHai:
+                    ketqua=nho; break;
+                
             }
             lblDisplay.Text = ketqua.ToString();
             return ketqua; 
@@ -98,6 +56,7 @@ namespace Calculator
 
             isTypingNumber = false;
             TinhKetQua();
+            //lblDisplay.Text=TinhKetQua().ToString();
         }
 
         private void NhapSo(object sender, EventArgs e)
@@ -124,16 +83,28 @@ namespace Calculator
                     pheptoan = PhepToan.Nhan;break;
                 case "/":
                     pheptoan = PhepToan.Chia;break;
-
+                case "√":
+                    pheptoan = PhepToan.CanBacHai;
+                    lblDisplay.Text=Math.Sqrt(double.Parse(lblDisplay.Text)).ToString(); break;
+                                       
             }
 
-            TinhKetQua();
+            //TinhKetQua();
             nho = double.Parse(lblDisplay.Text);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            if (lblDisplay.Text.Length != 1 && lblDisplay.Text !="0.")
+            {
+                lblDisplay.Text = lblDisplay.Text.Remove(lblDisplay.Text.Length - 1);
+            }
+            else lblDisplay.Text = "0.";
         }
 
        

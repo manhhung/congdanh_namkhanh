@@ -181,7 +181,7 @@
             this.btnTru.TabIndex = 12;
             this.btnTru.Text = "-";
             this.btnTru.UseVisualStyleBackColor = true;
-            this.btnTru.Click += new System.EventHandler(this.btnTru_Click);
+            this.btnTru.Click += new System.EventHandler(this.NhapPhepToan);
             // 
             // btnNhan
             // 
@@ -191,7 +191,7 @@
             this.btnNhan.TabIndex = 13;
             this.btnNhan.Text = "*";
             this.btnNhan.UseVisualStyleBackColor = true;
-            this.btnNhan.Click += new System.EventHandler(this.btnNhan_Click);
+            this.btnNhan.Click += new System.EventHandler(this.NhapPhepToan);
             // 
             // btnChia
             // 
@@ -201,7 +201,7 @@
             this.btnChia.TabIndex = 14;
             this.btnChia.Text = "/";
             this.btnChia.UseVisualStyleBackColor = true;
-            this.btnChia.Click += new System.EventHandler(this.btnChia_Click);
+            this.btnChia.Click += new System.EventHandler(this.NhapPhepToan);
             // 
             // btnBang
             // 
@@ -221,7 +221,6 @@
             this.btnThapPhan.TabIndex = 16;
             this.btnThapPhan.Text = ".";
             this.btnThapPhan.UseVisualStyleBackColor = true;
-            this.btnThapPhan.Click += new System.EventHandler(this.btnThapPhan_Click);
             // 
             // btnAmDuong
             // 
@@ -250,6 +249,7 @@
             this.btnSqrt.TabIndex = 19;
             this.btnSqrt.Text = "√";
             this.btnSqrt.UseVisualStyleBackColor = true;
+            this.btnSqrt.Click += new System.EventHandler(this.NhapPhepToan);
             // 
             // btnBack
             // 
@@ -259,6 +259,7 @@
             this.btnBack.TabIndex = 20;
             this.btnBack.Text = "←";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // button5
             // 
@@ -273,7 +274,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(324, 307);
+            this.ClientSize = new System.Drawing.Size(291, 259);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnSqrt);
