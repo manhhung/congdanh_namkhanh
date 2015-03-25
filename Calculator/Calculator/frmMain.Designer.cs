@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.lblDisplay = new System.Windows.Forms.Label();
             this.btn7 = new System.Windows.Forms.Button();
             this.btn8 = new System.Windows.Forms.Button();
@@ -168,7 +169,7 @@
             this.btnCong.Location = new System.Drawing.Point(154, 66);
             this.btnCong.Name = "btnCong";
             this.btnCong.Size = new System.Drawing.Size(30, 30);
-            this.btnCong.TabIndex = 11;
+            this.btnCong.TabIndex = 10;
             this.btnCong.Text = "+";
             this.btnCong.UseVisualStyleBackColor = true;
             this.btnCong.Click += new System.EventHandler(this.NhapPhepToan);
@@ -178,7 +179,7 @@
             this.btnTru.Location = new System.Drawing.Point(154, 111);
             this.btnTru.Name = "btnTru";
             this.btnTru.Size = new System.Drawing.Size(30, 30);
-            this.btnTru.TabIndex = 12;
+            this.btnTru.TabIndex = 11;
             this.btnTru.Text = "-";
             this.btnTru.UseVisualStyleBackColor = true;
             this.btnTru.Click += new System.EventHandler(this.NhapPhepToan);
@@ -188,7 +189,7 @@
             this.btnNhan.Location = new System.Drawing.Point(154, 161);
             this.btnNhan.Name = "btnNhan";
             this.btnNhan.Size = new System.Drawing.Size(30, 30);
-            this.btnNhan.TabIndex = 13;
+            this.btnNhan.TabIndex = 12;
             this.btnNhan.Text = "*";
             this.btnNhan.UseVisualStyleBackColor = true;
             this.btnNhan.Click += new System.EventHandler(this.NhapPhepToan);
@@ -198,7 +199,7 @@
             this.btnChia.Location = new System.Drawing.Point(154, 208);
             this.btnChia.Name = "btnChia";
             this.btnChia.Size = new System.Drawing.Size(30, 30);
-            this.btnChia.TabIndex = 14;
+            this.btnChia.TabIndex = 13;
             this.btnChia.Text = "/";
             this.btnChia.UseVisualStyleBackColor = true;
             this.btnChia.Click += new System.EventHandler(this.NhapPhepToan);
@@ -208,7 +209,7 @@
             this.btnBang.Location = new System.Drawing.Point(245, 161);
             this.btnBang.Name = "btnBang";
             this.btnBang.Size = new System.Drawing.Size(33, 77);
-            this.btnBang.TabIndex = 15;
+            this.btnBang.TabIndex = 19;
             this.btnBang.Text = "=";
             this.btnBang.UseVisualStyleBackColor = true;
             this.btnBang.Click += new System.EventHandler(this.btnBang_Click);
@@ -218,7 +219,7 @@
             this.btnThapPhan.Location = new System.Drawing.Point(105, 208);
             this.btnThapPhan.Name = "btnThapPhan";
             this.btnThapPhan.Size = new System.Drawing.Size(30, 30);
-            this.btnThapPhan.TabIndex = 16;
+            this.btnThapPhan.TabIndex = 14;
             this.btnThapPhan.Text = ".";
             this.btnThapPhan.UseVisualStyleBackColor = true;
             this.btnThapPhan.Click += new System.EventHandler(this.btnThapPhan_Click);
@@ -231,13 +232,14 @@
             this.btnAmDuong.TabIndex = 17;
             this.btnAmDuong.Text = "+/-";
             this.btnAmDuong.UseVisualStyleBackColor = true;
+            this.btnAmDuong.Click += new System.EventHandler(this.btnAmDuong_Click);
             // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(248, 66);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(30, 75);
-            this.button2.TabIndex = 18;
+            this.button2.TabIndex = 20;
             this.button2.Text = "C";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -247,25 +249,27 @@
             this.btnSqrt.Location = new System.Drawing.Point(200, 208);
             this.btnSqrt.Name = "btnSqrt";
             this.btnSqrt.Size = new System.Drawing.Size(30, 30);
-            this.btnSqrt.TabIndex = 19;
+            this.btnSqrt.TabIndex = 15;
             this.btnSqrt.Text = "√";
             this.btnSqrt.UseVisualStyleBackColor = true;
+            this.btnSqrt.Click += new System.EventHandler(this.btnSqrt_Click);
             // 
             // btnBack
             // 
             this.btnBack.Location = new System.Drawing.Point(200, 66);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(30, 30);
-            this.btnBack.TabIndex = 20;
+            this.btnBack.TabIndex = 18;
             this.btnBack.Text = "←";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnPhanTram
             // 
             this.btnPhanTram.Location = new System.Drawing.Point(200, 161);
             this.btnPhanTram.Name = "btnPhanTram";
             this.btnPhanTram.Size = new System.Drawing.Size(30, 30);
-            this.btnPhanTram.TabIndex = 21;
+            this.btnPhanTram.TabIndex = 16;
             this.btnPhanTram.Text = "%";
             this.btnPhanTram.UseVisualStyleBackColor = true;
             this.btnPhanTram.Click += new System.EventHandler(this.btnPhanTram_Click);
@@ -298,6 +302,7 @@
             this.Controls.Add(this.btn7);
             this.Controls.Add(this.lblDisplay);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.Text = "Calculator";

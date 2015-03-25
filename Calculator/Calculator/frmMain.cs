@@ -151,6 +151,21 @@ namespace Calculator
             lblDisplay.Text = (nho * double.Parse(lblDisplay.Text) / 100).ToString();
 
         }
+
+        private void btnAmDuong_Click(object sender, EventArgs e)
+        {
+            lblDisplay.Text=(double.Parse(lblDisplay.Text)*(-1)).ToString();
+        }
+
+        private void btnSqrt_Click(object sender, EventArgs e)
+        {
+            lblDisplay.Text=(Math.Sqrt(double.Parse( lblDisplay.Text))).ToString();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            lblDisplay.Text = lblDisplay.Text.Remove(lblDisplay.Text.Length - 1);
+        }
    
     }
 }
