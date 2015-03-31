@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using System.Globalization;
+//using System.Globalization;
 
 namespace Calculator
 {
@@ -61,14 +61,19 @@ namespace Calculator
         }
 
         private void NhapSo(object sender, EventArgs e)
+        {
+            NhapSo(((Button)sender).Text);
+        }
+
+        private void NhapSo(string so)
         {           
             if (isTypingNumber)
             {         
-                    lblDisplay.Text = lblDisplay.Text + ((Button)sender).Text;                 
+                    lblDisplay.Text = lblDisplay.Text + so;                 
             }
             else
             {
-                lblDisplay.Text = ((Button)sender).Text;
+                lblDisplay.Text = so;
                 isTypingNumber = true;
             }
         }
@@ -92,7 +97,7 @@ namespace Calculator
                                        
             }
 
-            nho = double.Parse(lblDisplay.Text, CultureInfo.InvariantCulture);
+            nho = double.Parse(lblDisplay.Text);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -137,6 +142,20 @@ namespace Calculator
             if (CheckAmDuong(lblDisplay.Text)) lblDisplay.Text = "-"+ lblDisplay.Text;
             else lblDisplay.Text=lblDisplay.Text.Remove(0, 1);
         }
+
+        private void frmMain_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            switch(e.KeyChar)
+            {
+                case '0': case '1': case '2': case '3': case '4': case '5': case '6': case '7': case '8': case '9': 
+                    NhapSo(""+e.KeyChar);
+                    break;
+            }
+            
+           
+        }
+
+     
        
     }
 }

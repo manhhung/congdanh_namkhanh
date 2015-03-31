@@ -14,3 +14,11 @@ C:\Users\Administrator\Documents\GitHub\congdanh_namkhanh\Calculator\Calculator\
 C:\Users\Administrator\Documents\GitHub\congdanh_namkhanh\Calculator\Calculator\obj\x86\Debug\Calculator.frmMain.resources
 C:\Users\Administrator\Documents\GitHub\congdanh_namkhanh\Calculator\Calculator\obj\x86\Debug\Calculator.Properties.Resources.resources
 C:\Users\Administrator\Documents\GitHub\congdanh_namkhanh\Calculator\Calculator\obj\x86\Debug\Calculator.csproj.GenerateResource.Cache
+C:\Users\windy\Documents\GitHub\congdanh_namkhanh\Calculator\Calculator\obj\x86\Debug\Calculator.exe
+C:\Users\windy\Documents\GitHub\congdanh_namkhanh\Calculator\Calculator\obj\x86\Debug\Calculator.pdb
+C:\Users\windy\Documents\GitHub\congdanh_namkhanh\Calculator\Calculator\bin\Debug\Calculator.exe
+C:\Users\windy\Documents\GitHub\congdanh_namkhanh\Calculator\Calculator\bin\Debug\Calculator.pdb
+C:\Users\windy\Documents\GitHub\congdanh_namkhanh\Calculator\Calculator\obj\x86\Debug\Calculator.csprojResolveAssemblyReference.cache
+C:\Users\windy\Documents\GitHub\congdanh_namkhanh\Calculator\Calculator\obj\x86\Debug\Calculator.frmMain.resources
+C:\Users\windy\Documents\GitHub\congdanh_namkhanh\Calculator\Calculator\obj\x86\Debug\Calculator.Properties.Resources.resources
+C:\Users\windy\Documents\GitHub\congdanh_namkhanh\Calculator\Calculator\obj\x86\Debug\Calculator.csproj.GenerateResource.Cache

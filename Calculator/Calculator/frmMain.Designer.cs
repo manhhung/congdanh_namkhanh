@@ -301,10 +301,12 @@
             this.Controls.Add(this.btn7);
             this.Controls.Add(this.lblDisplay);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.Text = "Calculator";
             this.Load += new System.EventHandler(this.frmMain_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmMain_KeyPress);
             this.ResumeLayout(false);
 
         }
