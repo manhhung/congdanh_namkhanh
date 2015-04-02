@@ -14,6 +14,8 @@ namespace MyPhoto
         public Form1()
         {
             InitializeComponent();
+            mnuView.DropDown = ctxMenuPhoto;
+            SetStatusStrip(null);
         }
 
         private void mnuLoad_Click(object sender, EventArgs e)
@@ -33,6 +35,7 @@ namespace MyPhoto
                     MessageBox.Show("Unable to load files" + ex.Message);
                     pbxPhoto.Image = null;
                 }
+                SetStatusStrip(dlg.FileName);
             }
             dlg.Dispose();
         }
@@ -41,5 +44,22 @@ namespace MyPhoto
         {
 
         }
+        private void SetStatusStrip(string path)
+        {
+            if (pbxPhoto.Image !=null)
+            {
+                statusInfo.Text = path;
+                statusImageSize.Text = String.Format("{0:#} x {1:#}", pbxPhoto.Image.Width, pbxPhoto.Image.Height);
+            }
+            else
+            {
+                statusInfo.Text=null;
+                statusImageSize.Text=null;
+                statusAlbumPos.Text=null;
+
+            }
+        }
+            
+       
     }
 }
