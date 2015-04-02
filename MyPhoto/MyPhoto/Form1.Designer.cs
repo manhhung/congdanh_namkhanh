@@ -30,25 +30,25 @@
         {
             this.components = new System.ComponentModel.Container();
             this.pbxPhoto = new System.Windows.Forms.PictureBox();
+            this.ctxMenuPhoto = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.mnuImage = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mnuFile = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuLoad = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuView = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.statusInfo = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusImageSize = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusAlbumPos = new System.Windows.Forms.ToolStripStatusLabel();
-            this.ctxMenuPhoto = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.mnuImage = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuImageScale = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuImageStretch = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuImageActual = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuView = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPhoto)).BeginInit();
+            this.ctxMenuPhoto.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
-            this.ctxMenuPhoto.SuspendLayout();
             this.SuspendLayout();
             // 
             // pbxPhoto
@@ -62,6 +62,26 @@
             this.pbxPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxPhoto.TabIndex = 1;
             this.pbxPhoto.TabStop = false;
+            // 
+            // ctxMenuPhoto
+            // 
+            this.ctxMenuPhoto.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuImage});
+            this.ctxMenuPhoto.Name = "ctxMenuPhoto";
+            this.ctxMenuPhoto.Size = new System.Drawing.Size(153, 48);
+            // 
+            // mnuImage
+            // 
+            this.mnuImage.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuImageScale,
+            this.mnuImageStretch,
+            this.mnuImageActual});
+            this.mnuImage.Name = "mnuImage";
+            this.mnuImage.Size = new System.Drawing.Size(152, 22);
+            this.mnuImage.Text = "&Image";
+            this.mnuImage.DropDownOpening += new System.EventHandler(this.mnuImage_DropDownOpening);
+            this.mnuImage.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.mnuImage_DropDownItemClicked);
+            this.mnuImage.Click += new System.EventHandler(this.mnuImage_Click);
             // 
             // menuStrip1
             // 
@@ -93,16 +113,22 @@
             this.mnuLoad.Text = "&Load";
             this.mnuLoad.Click += new System.EventHandler(this.mnuLoad_Click);
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exitToolStripMenuItem.Text = "&Exit";
             // 
-            // toolStripSeparator1
+            // mnuView
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            this.mnuView.Name = "mnuView";
+            this.mnuView.Size = new System.Drawing.Size(44, 20);
+            this.mnuView.Text = "&View";
             // 
             // statusStrip1
             // 
@@ -145,22 +171,6 @@
             this.statusAlbumPos.Size = new System.Drawing.Size(28, 19);
             this.statusAlbumPos.Text = "1/1";
             // 
-            // ctxMenuPhoto
-            // 
-            this.ctxMenuPhoto.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuImage,
-            this.mnuImageScale,
-            this.mnuImageStretch,
-            this.mnuImageActual});
-            this.ctxMenuPhoto.Name = "ctxMenuPhoto";
-            this.ctxMenuPhoto.Size = new System.Drawing.Size(153, 114);
-            // 
-            // mnuImage
-            // 
-            this.mnuImage.Name = "mnuImage";
-            this.mnuImage.Size = new System.Drawing.Size(141, 22);
-            this.mnuImage.Text = "&Image";
-            // 
             // mnuImageScale
             // 
             this.mnuImageScale.Checked = true;
@@ -184,12 +194,6 @@
             this.mnuImageActual.Tag = "Normal";
             this.mnuImageActual.Text = "&Actual Size";
             // 
-            // mnuView
-            // 
-            this.mnuView.Name = "mnuView";
-            this.mnuView.Size = new System.Drawing.Size(44, 20);
-            this.mnuView.Text = "&View";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -202,11 +206,11 @@
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pbxPhoto)).EndInit();
+            this.ctxMenuPhoto.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            this.ctxMenuPhoto.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -226,10 +230,10 @@
         private System.Windows.Forms.ToolStripStatusLabel statusAlbumPos;
         private System.Windows.Forms.ContextMenuStrip ctxMenuPhoto;
         private System.Windows.Forms.ToolStripMenuItem mnuImage;
+        private System.Windows.Forms.ToolStripMenuItem mnuView;
         private System.Windows.Forms.ToolStripMenuItem mnuImageScale;
         private System.Windows.Forms.ToolStripMenuItem mnuImageStretch;
         private System.Windows.Forms.ToolStripMenuItem mnuImageActual;
-        private System.Windows.Forms.ToolStripMenuItem mnuView;
     }
 }
 

@@ -59,6 +59,42 @@ namespace MyPhoto
 
             }
         }
+        private void ProcessImageOpening(ToolStripDropDownItem parent)
+        {
+            if (parent != null)
+            {
+                string enumVal = pbxPhoto.SizeMode.ToString();
+                foreach (ToolStripMenuItem item in parent.DropDownItems)
+                {
+                    item.Enabled= (pbxPhoto.Image != null);
+                    item.Checked = item.Tag.Equals(enumVal);
+                }
+            }
+        }
+
+        private void mnuImage_DropDownOpening(object sender, EventArgs e)
+        {
+            ProcessImageOpening(sender as ToolStripDropDownItem);
+        }
+
+        private void mnuImage_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void ProcessImageClick(ToolStripItemClickedEventArgs e)
+        {
+            ToolStripItem item = e.ClickedItem;
+            string enumVal = item.Tag as string;
+            if (enumVal !=null)
+            {
+                pbxPhoto.SizeMode=(PictureBoxSizeMode) Enum.Parse(typeof(PictureBoxSizeMode),enumVal);
+            }
+        }
+
+        private void mnuImage_DropDownItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            ProcessImageClick(e);
+        }
             
        
     }

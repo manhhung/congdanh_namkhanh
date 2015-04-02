@@ -6,3 +6,5 @@ C:\Users\windy\Documents\GitHub\congdanh_namkhanh\WindowsFormsApplication1\Windo
 C:\Users\windy\Documents\GitHub\congdanh_namkhanh\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
 C:\Users\windy\Documents\GitHub\congdanh_namkhanh\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
 C:\Users\windy\Documents\GitHub\congdanh_namkhanh\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\SoThuSaiGon.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\GitHub\congdanh_namkhanh\So Thu Sai Gon\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
+C:\Users\Administrator\Documents\GitHub\congdanh_namkhanh\So Thu Sai Gon\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb

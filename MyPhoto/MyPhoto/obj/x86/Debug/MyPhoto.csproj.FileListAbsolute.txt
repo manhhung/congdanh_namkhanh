@@ -5,3 +5,10 @@ C:\Users\windy\Documents\GitHub\congdanh_namkhanh\MyPhoto\MyPhoto\obj\x86\Debug\
 C:\Users\windy\Documents\GitHub\congdanh_namkhanh\MyPhoto\MyPhoto\obj\x86\Debug\MyPhoto.csproj.GenerateResource.Cache
 C:\Users\windy\Documents\GitHub\congdanh_namkhanh\MyPhoto\MyPhoto\obj\x86\Debug\MyPhoto.exe
 C:\Users\windy\Documents\GitHub\congdanh_namkhanh\MyPhoto\MyPhoto\obj\x86\Debug\MyPhoto.pdb
+C:\Users\Administrator\Documents\GitHub\congdanh_namkhanh\MyPhoto\MyPhoto\obj\x86\Debug\MyPhoto.exe
+C:\Users\Administrator\Documents\GitHub\congdanh_namkhanh\MyPhoto\MyPhoto\obj\x86\Debug\MyPhoto.pdb
+C:\Users\Administrator\Documents\GitHub\congdanh_namkhanh\MyPhoto\MyPhoto\bin\Debug\MyPhoto.exe
+C:\Users\Administrator\Documents\GitHub\congdanh_namkhanh\MyPhoto\MyPhoto\bin\Debug\MyPhoto.pdb
+C:\Users\Administrator\Documents\GitHub\congdanh_namkhanh\MyPhoto\MyPhoto\obj\x86\Debug\MyPhoto.Form1.resources
+C:\Users\Administrator\Documents\GitHub\congdanh_namkhanh\MyPhoto\MyPhoto\obj\x86\Debug\MyPhoto.Properties.Resources.resources
+C:\Users\Administrator\Documents\GitHub\congdanh_namkhanh\MyPhoto\MyPhoto\obj\x86\Debug\MyPhoto.csproj.GenerateResource.Cache
