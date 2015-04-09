@@ -23,8 +23,13 @@ namespace PhotoAlbum
             + @"\Albums";
         }
 
+<<<<<<< HEAD
         private int _pos = -1;
         private string _name = String.Empty;
+=======
+        private int pos = -1;
+        private string name = String.Empty;
+>>>>>>> origin/Bai-MyPhoto
         private PhotoAlbum album;
 
         public AlbumManager()
@@ -35,7 +40,11 @@ namespace PhotoAlbum
         public AlbumManager(string name)
             : this()
         {
+<<<<<<< HEAD
             _name = name;
+=======
+            name = name;
+>>>>>>> origin/Bai-MyPhoto
             // TODO: load the album
             throw new NotImplementedException();
         }
@@ -46,8 +55,13 @@ namespace PhotoAlbum
         }
         public string FullName
         {
+<<<<<<< HEAD
             get { return _name; }
             private set { _name = value; }
+=======
+            get { return name; }
+            private set { name = value; }
+>>>>>>> origin/Bai-MyPhoto
         }
 
         public string ShortName
@@ -68,6 +82,7 @@ namespace PhotoAlbum
             {
                 if (Index < 0 || Index >= Album.Count)
                     return null;
+<<<<<<< HEAD
                 return Album[_pos];
             }
         }
@@ -132,5 +147,10 @@ namespace PhotoAlbum
             Index--;
             return true;
         }
+=======
+                return Album[pos];
+            }
+        }
+>>>>>>> origin/Bai-MyPhoto
     }
 }
