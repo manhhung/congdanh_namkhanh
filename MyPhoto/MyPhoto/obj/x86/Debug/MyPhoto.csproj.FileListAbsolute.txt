@@ -12,3 +12,4 @@ C:\Users\Administrator\Documents\GitHub\congdanh_namkhanh\MyPhoto\MyPhoto\bin\De
 C:\Users\Administrator\Documents\GitHub\congdanh_namkhanh\MyPhoto\MyPhoto\obj\x86\Debug\MyPhoto.Form1.resources
 C:\Users\Administrator\Documents\GitHub\congdanh_namkhanh\MyPhoto\MyPhoto\obj\x86\Debug\MyPhoto.Properties.Resources.resources
 C:\Users\Administrator\Documents\GitHub\congdanh_namkhanh\MyPhoto\MyPhoto\obj\x86\Debug\MyPhoto.csproj.GenerateResource.Cache
+C:\Users\windy\Documents\GitHub\congdanh_namkhanh\MyPhoto\MyPhoto\obj\x86\Debug\MyPhoto.csprojResolveAssemblyReference.cache
