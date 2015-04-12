@@ -23,13 +23,8 @@ namespace PhotoAlbum
             + @"\Albums";
         }
 
-<<<<<<< HEAD
         private int _pos = -1;
         private string _name = String.Empty;
-=======
-        private int pos = -1;
-        private string name = String.Empty;
->>>>>>> origin/Bai-MyPhoto
         private PhotoAlbum album;
 
         public AlbumManager()
@@ -40,28 +35,24 @@ namespace PhotoAlbum
         public AlbumManager(string name)
             : this()
         {
-<<<<<<< HEAD
             _name = name;
-=======
-            name = name;
->>>>>>> origin/Bai-MyPhoto
             // TODO: load the album
+            album = AlbumStorage.ReadAlbum(name);
+            if (Album.Count > 0)
+                Index = 0;
+            
             throw new NotImplementedException();
         }
-
+        
+        
         public PhotoAlbum Album
         {
             get { return album; }
         }
         public string FullName
         {
-<<<<<<< HEAD
             get { return _name; }
             private set { _name = value; }
-=======
-            get { return name; }
-            private set { name = value; }
->>>>>>> origin/Bai-MyPhoto
         }
 
         public string ShortName
@@ -82,7 +73,6 @@ namespace PhotoAlbum
             {
                 if (Index < 0 || Index >= Album.Count)
                     return null;
-<<<<<<< HEAD
                 return Album[_pos];
             }
         }
@@ -110,7 +100,7 @@ namespace PhotoAlbum
             {
                 if (value < 0 || value >= Album.Count)
                     throw new IndexOutOfRangeException(
-                    "The given index isout of bounds");
+                    "The given index is out of bounds");
                 _pos = value;
             }
         }
@@ -118,17 +108,30 @@ namespace PhotoAlbum
         static public bool AlbumExists(string name)
         {
             // TODO: implement AlbumExists method
-            return false;
+            return File.Exists(name);
+        
         }
 
         public void Save()
         {
             // TODO: Implement Save method
+            if (FullName == null)
+                throw new InvalidOperationException(
+                "Unable to save album with no name");
+            AlbumStorage.WriteAlbum(Album, FullName);
             throw new NotImplementedException();
         }
         public void Save(string name, bool overwrite)
         {
-            // TODO: Implement Save(name) method
+            // TODO: Implement Save( name) method
+            if (name == null)
+                throw new ArgumentNullException("name");
+            if (name != FullName
+            && AlbumExists(name) && !overwrite)
+                throw new ArgumentException(
+                "An album with this name exists");
+            AlbumStorage.WriteAlbum(Album, name);
+            FullName = name;
             throw new NotImplementedException();
         }
 
@@ -147,10 +150,5 @@ namespace PhotoAlbum
             Index--;
             return true;
         }
-=======
-                return Album[pos];
-            }
-        }
->>>>>>> origin/Bai-MyPhoto
     }
 }

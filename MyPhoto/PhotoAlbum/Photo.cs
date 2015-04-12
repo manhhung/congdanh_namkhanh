@@ -6,14 +6,13 @@ using System.Drawing;
 
 namespace PhotoAlbum
 {
-    class Photo
+    public class Photo: IDisposable
     {
         private string fileName;
         public string FileName
         {
             get { return this.fileName; }
         }
-
         private Bitmap bitmap;
         public Bitmap Image
         {
@@ -24,7 +23,6 @@ namespace PhotoAlbum
                 return bitmap;
             }
         }
-
         private string caption = "";
         public string Caption
         {
@@ -66,7 +64,6 @@ namespace PhotoAlbum
         }
         }
         private string notes = "";
-    
         public string Notes
         {
             get { return notes; }
@@ -79,7 +76,18 @@ namespace PhotoAlbum
                 }
             }
         }
-
+        public void ReleaseImage()
+        {
+            if (bitmap != null)
+            {
+                bitmap.Dispose();
+                bitmap = null;
+            }
+        }
+        public void Dispose()
+        {
+            ReleaseImage();
+        }
         private bool hasChanged = true;
         
         public Photo(string fileName)

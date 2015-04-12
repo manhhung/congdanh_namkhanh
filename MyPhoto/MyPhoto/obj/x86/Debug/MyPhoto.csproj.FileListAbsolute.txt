@@ -13,3 +13,15 @@ C:\Users\Administrator\Documents\GitHub\congdanh_namkhanh\MyPhoto\MyPhoto\obj\x8
 C:\Users\Administrator\Documents\GitHub\congdanh_namkhanh\MyPhoto\MyPhoto\obj\x86\Debug\MyPhoto.Properties.Resources.resources
 C:\Users\Administrator\Documents\GitHub\congdanh_namkhanh\MyPhoto\MyPhoto\obj\x86\Debug\MyPhoto.csproj.GenerateResource.Cache
 C:\Users\windy\Documents\GitHub\congdanh_namkhanh\MyPhoto\MyPhoto\obj\x86\Debug\MyPhoto.csprojResolveAssemblyReference.cache
+C:\Users\windy\Desktop\MyPhoto\MyPhoto\obj\x86\Debug\MyPhoto.exe
+C:\Users\windy\Desktop\MyPhoto\MyPhoto\obj\x86\Debug\MyPhoto.pdb
+C:\Users\windy\Desktop\MyPhoto\MyPhoto\bin\Debug\MyPhoto.exe
+C:\Users\windy\Desktop\MyPhoto\MyPhoto\bin\Debug\MyPhoto.pdb
+C:\Users\windy\Desktop\MyPhoto\MyPhoto\obj\x86\Debug\MyPhoto.csprojResolveAssemblyReference.cache
+C:\Users\windy\Desktop\MyPhoto\MyPhoto\obj\x86\Debug\MyPhoto.Properties.Resources.resources
+C:\Users\windy\Desktop\MyPhoto\MyPhoto\obj\x86\Debug\MyPhoto.csproj.GenerateResource.Cache
+C:\Users\windy\Desktop\MyPhoto\MyPhoto\bin\Debug\PhotoAlbum.dll
+C:\Users\windy\Desktop\MyPhoto\MyPhoto\bin\Debug\PhotoAlbum.pdb
+C:\Users\windy\Desktop\MyPhoto\MyPhoto\obj\x86\Debug\MyPhoto.MainForm.resources
+C:\Users\Administrator\Desktop\MyPhoto\MyPhoto\obj\x86\Debug\MyPhoto.exe
+C:\Users\Administrator\Desktop\MyPhoto\MyPhoto\obj\x86\Debug\MyPhoto.pdb

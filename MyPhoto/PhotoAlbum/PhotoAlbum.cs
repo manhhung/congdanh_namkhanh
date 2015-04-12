@@ -6,7 +6,7 @@ using System.Collections.ObjectModel;
 
 namespace PhotoAlbum
 {
-    class PhotoAlbum: Collection<Photo>
+    public class PhotoAlbum: Collection<Photo>,IDisposable
     {
         private bool hasChanged = false;
         public bool HasChanged
@@ -25,7 +25,11 @@ namespace PhotoAlbum
                         p.HasChanged = false;
             }
         }
-
+        public void Dispose()
+        {
+            foreach (Photo p in this)
+                p.Dispose();
+        }
         public Photo Add(string fileName)
         {
             Photo p = new Photo(fileName);
@@ -37,6 +41,7 @@ namespace PhotoAlbum
         {
             if (Count > 0)
             {
+                Dispose();
                 base.ClearItems();
                 HasChanged = true;
             }
@@ -50,7 +55,7 @@ namespace PhotoAlbum
 
         protected override void RemoveItem(int index)
         {
-            //Items[index].Dispose();
+            Items[index].Dispose();
             hasChanged = true;
             base.RemoveItem(index);
         }

@@ -1,0 +1,5 @@
+C:\Users\windy\Desktop\MyPhoto\PhotoAlbum\bin\Debug\PhotoAlbum.dll
+C:\Users\windy\Desktop\MyPhoto\PhotoAlbum\bin\Debug\PhotoAlbum.pdb
+C:\Users\windy\Desktop\MyPhoto\PhotoAlbum\obj\Debug\PhotoAlbum.dll
+C:\Users\windy\Desktop\MyPhoto\PhotoAlbum\obj\Debug\PhotoAlbum.pdb
+C:\Users\windy\Desktop\MyPhoto\PhotoAlbum\obj\Debug\PhotoAlbum.csprojResolveAssemblyReference.cache
