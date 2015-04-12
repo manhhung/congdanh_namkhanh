@@ -41,7 +41,7 @@ namespace PhotoAlbum
             if (Album.Count > 0)
                 Index = 0;
             
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
         
         
@@ -132,7 +132,7 @@ namespace PhotoAlbum
                 "An album with this name exists");
             AlbumStorage.WriteAlbum(Album, name);
             FullName = name;
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
         public bool MoveNext()

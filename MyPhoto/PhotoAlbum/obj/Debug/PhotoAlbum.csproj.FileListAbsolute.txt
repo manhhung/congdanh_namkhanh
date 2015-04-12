@@ -3,3 +3,8 @@ C:\Users\windy\Desktop\MyPhoto\PhotoAlbum\bin\Debug\PhotoAlbum.pdb
 C:\Users\windy\Desktop\MyPhoto\PhotoAlbum\obj\Debug\PhotoAlbum.dll
 C:\Users\windy\Desktop\MyPhoto\PhotoAlbum\obj\Debug\PhotoAlbum.pdb
 C:\Users\windy\Desktop\MyPhoto\PhotoAlbum\obj\Debug\PhotoAlbum.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\GitHub\congdanh_namkhanh\MyPhoto\PhotoAlbum\bin\Debug\PhotoAlbum.dll
+C:\Users\Administrator\Documents\GitHub\congdanh_namkhanh\MyPhoto\PhotoAlbum\bin\Debug\PhotoAlbum.pdb
+C:\Users\Administrator\Documents\GitHub\congdanh_namkhanh\MyPhoto\PhotoAlbum\obj\Debug\PhotoAlbum.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\GitHub\congdanh_namkhanh\MyPhoto\PhotoAlbum\obj\Debug\PhotoAlbum.dll
+C:\Users\Administrator\Documents\GitHub\congdanh_namkhanh\MyPhoto\PhotoAlbum\obj\Debug\PhotoAlbum.pdb

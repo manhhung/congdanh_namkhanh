@@ -42,9 +42,12 @@ namespace MyPhoto
 
         private void NewAlbum()
         {
-            // TODO: clean up, save existing album
-            Manager = new AlbumManager();
-            DisplayAlbum();
+            if (Manager == null || SaveAndCloseAlbum())
+            {
+                // Album closed, create a new one
+                Manager = new AlbumManager();
+                DisplayAlbum();
+            }
         }
         
 
@@ -114,12 +117,26 @@ namespace MyPhoto
             dlg.Filter = "Album files (*.abm)|*.abm|" + "All files (*.*)|*.*";
             dlg.InitialDirectory = AlbumManager.DefaultPath;
             dlg.RestoreDirectory = true;
+           
             if (dlg.ShowDialog() == DialogResult.OK)
                {
-                    // TODO: save any existing album.
-                    // Open the new album
-                    // TODO: handle invalid album file
-                     Manager = new AlbumManager( dlg.FileName);
+                   string path = dlg.FileName;
+                   // Close any existing album
+                   if (!SaveAndCloseAlbum())
+                       return; // Close canceled
+                   try
+                   {
+                       
+                       // Open the new album                  
+                       Manager = new AlbumManager(path);
+                   }
+                   catch (AlbumStorageException aex)
+                   {
+                       string msg = String.Format("Unableto open album file {0}\n({1})",path, aex.Message);
+                       MessageBox.Show(msg, "Unable to Open");
+                       Manager = new AlbumManager();
+                       
+                   }
                      DisplayAlbum();
                
                }
@@ -129,7 +146,19 @@ namespace MyPhoto
 
         private void SaveAlbum(string name)
         {
-            Manager.Save(name, true);
+            try
+            {
+                Manager.Save(name, true);
+            }
+            catch (AlbumStorageException aex)
+            {
+                string msg = String.Format("Unable to save album {0} ({1})\n\n"+ "Do you wish to save the album "
+                    + "under an alternate name?",name, aex.Message);
+                DialogResult result = MessageBox.Show(msg, "Unable to Save", MessageBoxButtons.YesNo, MessageBoxIcon.Error,
+                    MessageBoxDefaultButton.Button2);
+                if (DialogResult == DialogResult.Yes)
+                    SaveAsAlbum();
+            }
         }
         private void SaveAlbum()
         {
@@ -255,6 +284,32 @@ namespace MyPhoto
         {
             mnuNext.Enabled  = (Manager.Index < Manager.Album.Count - 1);
             mnuPrevious.Enabled = (Manager.Index > 0);
+        }
+        private bool SaveAndCloseAlbum()
+        {
+            if (Manager.Album.HasChanged)
+            {
+                string msg;
+                if (String.IsNullOrEmpty(Manager.FullName))
+                    msg = "Do you wish to save your changes?";
+                else
+                    msg = String.Format("Do you wish to "
+                    + "save your changes to \n{0}?",
+                    Manager.FullName);
+                DialogResult result = MessageBox.Show(this, msg,"Save Changes?",MessageBoxButtons.YesNoCancel,
+                    MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                    SaveAlbum();
+                else if (result == DialogResult.Cancel)
+                    return false; // do not close
+                
+            }
+            // Close the album and return true
+            if (Manager.Album != null)
+                Manager.Album.Dispose();
+            Manager = new AlbumManager();
+            SetTitleBar();
+            return true;
         }
        
     }
