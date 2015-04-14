@@ -28,3 +28,5 @@ C:\Users\Administrator\Documents\GitHub\congdanh_namkhanh\MyPhoto\MyPhoto\bin\De
 C:\Users\Administrator\Documents\GitHub\congdanh_namkhanh\MyPhoto\MyPhoto\bin\Debug\PhotoAlbum.pdb
 C:\Users\Administrator\Documents\GitHub\congdanh_namkhanh\MyPhoto\MyPhoto\obj\x86\Debug\MyPhoto.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Documents\GitHub\congdanh_namkhanh\MyPhoto\MyPhoto\obj\x86\Debug\MyPhoto.MainForm.resources
+C:\Users\Administrator\Documents\GitHub\congdanh_namkhanh\MyPhoto\MyPhoto\bin\Debug\MyPhotoControls.dll
+C:\Users\Administrator\Documents\GitHub\congdanh_namkhanh\MyPhoto\MyPhoto\bin\Debug\MyPhotoControls.pdb

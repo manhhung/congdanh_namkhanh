@@ -77,6 +77,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MyPhotoControls\MyPhotoControls.csproj">
+      <Project>{E9C08996-A84D-4CE2-B318-1533C68773CF}</Project>
+      <Name>MyPhotoControls</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PhotoAlbum\PhotoAlbum.csproj">
       <Project>{B7215B9B-D79D-4F67-8435-EF19C16C3154}</Project>
       <Name>PhotoAlbum</Name>

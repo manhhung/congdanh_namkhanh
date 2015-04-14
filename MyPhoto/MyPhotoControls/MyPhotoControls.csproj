@@ -5,12 +5,13 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{B7215B9B-D79D-4F67-8435-EF19C16C3154}</ProjectGuid>
+    <ProjectGuid>{E9C08996-A84D-4CE2-B318-1533C68773CF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PhotoAlbum</RootNamespace>
-    <AssemblyName>PhotoAlbum</AssemblyName>
+    <RootNamespace>MyPhotoControls</RootNamespace>
+    <AssemblyName>MyPhotoControls</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -34,20 +35,34 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AlbumManager.cs" />
-    <Compile Include="AlbumStorage.cs" />
-    <Compile Include="ImageUtility.cs" />
-    <Compile Include="Photo.cs" />
-    <Compile Include="PhotoAlbum.cs" />
+    <Compile Include="PixelDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PixelDialog.Designer.cs">
+      <DependentUpon>PixelDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PhotoAlbum\PhotoAlbum.csproj">
+      <Project>{B7215B9B-D79D-4F67-8435-EF19C16C3154}</Project>
+      <Name>PhotoAlbum</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="PixelDialog.resx">
+      <DependentUpon>PixelDialog.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

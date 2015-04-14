@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using PhotoAlbum;
+using MyPhotoControls;
 
 namespace MyPhoto
 {
@@ -32,6 +33,8 @@ namespace MyPhoto
             pbxPhoto.Image = Manager.CurrentImage;
             SetStatusStrip();
             SetTitleBar();
+            Point p = pbxPhoto.PointToClient(Form.MousePosition);
+            UpdatePixelDialog(p.X, p.Y);
         }
 
         private void menuFileNew_Click
@@ -211,7 +214,7 @@ namespace MyPhoto
 
         private void mnuExit_Click(object sender, EventArgs e)
         {
-
+            Close();
         }
 
         private void mnuEditAdd_Click(object sender, EventArgs e)
@@ -311,6 +314,50 @@ namespace MyPhoto
             SetTitleBar();
             return true;
         }
-       
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            e.Cancel = !SaveAndCloseAlbum();
+            base.OnFormClosing(e);
+        }
+        private PixelDialog _dlgPixel = null;
+        private PixelDialog PixelForm
+        {
+            get { return _dlgPixel; }
+            set { _dlgPixel = value; }
+        }
+
+        private void mnuPixelData_Click(object sender, EventArgs e)
+        {
+            if (PixelForm == null || PixelForm.IsDisposed)
+            {
+                PixelForm = new PixelDialog();
+                PixelForm.Owner = this;
+            }
+            PixelForm.Show();
+            Point p = pbxPhoto.PointToClient(Form.MousePosition);
+            UpdatePixelDialog(p.X, p.Y);
+        }
+        private void UpdatePixelDialog(int x, int y)
+        {
+            if (PixelForm != null && PixelForm.Visible)
+            {
+                Bitmap bmp = Manager.CurrentImage;
+                PixelForm.Text = (Manager.Current == null ? "Pixel Data" : Manager.Current.Caption);
+                if (bmp == null || !pbxPhoto.DisplayRectangle.Contains(x, y))
+                    PixelForm.ClearPixelData();
+                else
+                    PixelForm.UpdatePixelData(x, y, bmp,
+                    pbxPhoto.DisplayRectangle,
+                    new Rectangle(0, 0,
+                    bmp.Width, bmp.Height),
+                    pbxPhoto.SizeMode);
+            }
+           
+        }
+
+        private void pbxPhoto_MouseMove(object sender, MouseEventArgs e)
+        {
+            UpdatePixelDialog(e.X, e.Y);
+        }
     }
 }

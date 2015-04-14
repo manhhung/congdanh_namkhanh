@@ -1,0 +1,9 @@
+C:\Users\Administrator\Documents\GitHub\congdanh_namkhanh\MyPhoto\MyPhotoControls\bin\Debug\MyPhotoControls.dll
+C:\Users\Administrator\Documents\GitHub\congdanh_namkhanh\MyPhoto\MyPhotoControls\bin\Debug\MyPhotoControls.pdb
+C:\Users\Administrator\Documents\GitHub\congdanh_namkhanh\MyPhoto\MyPhotoControls\obj\Debug\MyPhotoControls.dll
+C:\Users\Administrator\Documents\GitHub\congdanh_namkhanh\MyPhoto\MyPhotoControls\obj\Debug\MyPhotoControls.pdb
+C:\Users\Administrator\Documents\GitHub\congdanh_namkhanh\MyPhoto\MyPhotoControls\bin\Debug\PhotoAlbum.dll
+C:\Users\Administrator\Documents\GitHub\congdanh_namkhanh\MyPhoto\MyPhotoControls\bin\Debug\PhotoAlbum.pdb
+C:\Users\Administrator\Documents\GitHub\congdanh_namkhanh\MyPhoto\MyPhotoControls\obj\Debug\MyPhotoControls.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\GitHub\congdanh_namkhanh\MyPhoto\MyPhotoControls\obj\Debug\MyPhotoControls.PixelDialog.resources
+C:\Users\Administrator\Documents\GitHub\congdanh_namkhanh\MyPhoto\MyPhotoControls\obj\Debug\MyPhotoControls.csproj.GenerateResource.Cache

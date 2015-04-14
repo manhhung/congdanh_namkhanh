@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyPhoto", "MyPhoto\MyPhoto.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotoAlbum", "PhotoAlbum\PhotoAlbum.csproj", "{B7215B9B-D79D-4F67-8435-EF19C16C3154}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyPhotoControls", "MyPhotoControls\MyPhotoControls.csproj", "{E9C08996-A84D-4CE2-B318-1533C68773CF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,16 @@ Global
 		{B7215B9B-D79D-4F67-8435-EF19C16C3154}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{B7215B9B-D79D-4F67-8435-EF19C16C3154}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{B7215B9B-D79D-4F67-8435-EF19C16C3154}.Release|x86.ActiveCfg = Release|Any CPU
+		{E9C08996-A84D-4CE2-B318-1533C68773CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9C08996-A84D-4CE2-B318-1533C68773CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9C08996-A84D-4CE2-B318-1533C68773CF}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{E9C08996-A84D-4CE2-B318-1533C68773CF}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{E9C08996-A84D-4CE2-B318-1533C68773CF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E9C08996-A84D-4CE2-B318-1533C68773CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9C08996-A84D-4CE2-B318-1533C68773CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9C08996-A84D-4CE2-B318-1533C68773CF}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{E9C08996-A84D-4CE2-B318-1533C68773CF}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{E9C08996-A84D-4CE2-B318-1533C68773CF}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
